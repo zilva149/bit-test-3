@@ -1,6 +1,6 @@
 console.clear();
 
-// 1st exercise
+// ********* 1st exercise ************
 
 function compareNums(a, b) {
   return a > b
@@ -14,7 +14,7 @@ console.log(compareNums(9, 9));
 
 console.log("--------------------------");
 
-// 2nd exercise
+// ********* 2nd exercise ***********
 
 for (let i = 1; i <= 10; i++) {
   console.log(i);
@@ -22,7 +22,7 @@ for (let i = 1; i <= 10; i++) {
 
 console.log("--------------------------");
 
-// 3rd exercise
+// ******* 3rd exercise *************
 
 for (let i = 0; i <= 10; i += 2) {
   console.log(i);
@@ -30,7 +30,7 @@ for (let i = 0; i <= 10; i += 2) {
 
 console.log("--------------------------");
 
-// 4th exercise
+// ********* 4th exercise **********
 
 for (let i = 0; i < 5; i++) {
   const random = Math.ceil(Math.random() * 10);
@@ -39,10 +39,12 @@ for (let i = 0; i < 5; i++) {
 
 console.log("--------------------------");
 
-// 5th exercise
+// ********* 5th exercise **********
 
 let i = 1;
+//generate an infinite loop
 while (i > 0) {
+  // console.log every random number until 5 is generated
   const random = Math.ceil(Math.random() * 10);
   console.log(random);
   if (random === 5) break;
@@ -51,8 +53,9 @@ while (i > 0) {
 
 console.log("--------------------------");
 
-// 6th exercise
+// ********* 6th exercise ************
 
+// function for random number generation
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -71,7 +74,7 @@ console.log(maxNum);
 
 console.log("--------------------------");
 
-// 7th exercise
+// ********** 7th exercise *************
 
 let arr2 = [];
 let a = 0;
@@ -79,9 +82,11 @@ let b = 0;
 let c = 0;
 let d = 0;
 for (let i = 0; i < 100; i++) {
+  // generate random letter from an array of letters
   const els = ["A", "B", "C", "D"];
   const random = Math.floor(Math.random() * els.length);
   const randomEl = els[random];
+  // check random letter value and increase a variable associated with it
   switch (randomEl) {
     case "A":
       a++;
@@ -103,7 +108,7 @@ console.log(a, b, c, d);
 
 console.log("--------------------------");
 
-// 8th exercise
+// ********* 8th exercise *************
 
 function lygineSuma(a, b) {
   if (
@@ -118,12 +123,13 @@ console.log(lygineSuma([6, 8, 6], [1, 5]));
 
 console.log("--------------------------");
 
-// 9th exercise
+// ************ 9th exercise ************
 
 function pirminisSkaicius(a) {
   if (typeof a !== "number") return "argument is not a number!";
   // one is not a prime number
   if (a <= 1) return false;
+  // two is a prime number
   if (a === 2) return true;
   for (let i = 2; i < a; i++) {
     if (a % i === 0) return false;
@@ -135,10 +141,14 @@ console.log(pirminisSkaicius(123));
 
 console.log("--------------------------");
 
+// *********** 10th Exercise ***********
+
 function telefonoNumeris(a) {
+  // input validation
   if (!Array.isArray(a)) return "not an array";
   if (a.length !== 10) return "array length must be 10 numbers long";
   for (let i = 0; i < 10; i++) {
+    // check if all the numbers are valid
     if (a[i] >= 10 || a[i] < 0) return "incorrect number input";
   }
   return `(${a[0]}${a[1]}${a[2]}) ${a[3]}${a[4]}${a[5]}-${a[6]}${a[7]}${a[8]}${a[9]}`;
